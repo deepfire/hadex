@@ -1,0 +1,13 @@
+* What?
+
+This repository is a partial map from Hackage package Github repository names into
+Github upstream user names:
+
+  - schema :: =file/cabal-upstream-github/$REPO=
+
+When a Github upstream is absent for a particular package/repository, the
+corresponding file is empty.
+
+* How?
+
+  =curl --silent https://raw.githubusercontent.com/deepfire/hadex/master/file/cabal-github-upstream/$REPO=
