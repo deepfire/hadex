@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+type="$1";  shift
+key="$1";   shift
+value="$1"; shift
+
+### file/
+mkdir -p             file/${type}
+if test ! -e file/${type}/${key}
+then echo -n "${value}" > file/${type}/${key}
+else echo "ERROR: file/${type}/${key} already present">&2; exit 1
+fi
